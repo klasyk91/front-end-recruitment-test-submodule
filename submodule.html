@@ -63,6 +63,7 @@
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
           <a href="#baconTab" class="mdl-layout__tab is-active">Bacon</a> <!-- BACON by Jakub -->
+          <a href="#checkoutTab" class="mdl-layout__tab">Checkout</a> <!-- CHECKOUT by Jakub -->
         </div>
       </header>
       <main class="mdl-layout__content">
@@ -72,6 +73,123 @@
           </section>
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" v-for="bacon in bacons" :class="bacon.id"> <!-- BACON by Jakub -->
             <img src="http://media.washtimes.com.s3.amazonaws.com/media/image/2015/02/23/bacon.jpg" alt="Bacon" style="width: 100%; height: 100%;" :class="bacon.id"> <!-- BACON by Jakub -->
+          </section>
+        </div>
+        <div class="mdl-layout__tab-panel" id="checkoutTab">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="left-column">
+              <div class="form-wrapper">
+
+                <form id="check_out_form" action="#">
+
+                    <span class="legend personal">Personal information</span>
+
+                    <div class="textfield fname">
+                      <label for="fname">First name</label>
+                      <div class="input fname-input">
+                        <input type="text" id="fname" name="firstname" placeholder="Elon">
+                      </div>
+                    </div>
+
+                    <div class="textfield lname">
+                      <label for="lname">Last name</label>
+                      <div class="input lname-input">
+                        <input type="text" id="lname" name="lastname" placeholder="Musk">
+                      </div>
+                    </div>
+
+                    <div class="textfield email">
+                      <label for="email">Email</label>
+                      <div class="input email-input">
+                        <input type="text" id="email" name="email" placeholder="elon@spacex.com">
+                      </div>
+                    </div>
+
+                    <div class="select country">
+                      <label for="country">Country</label>
+                      <select>
+                        <option value="0">United States</option>
+                        <option value="1">Poland</option>
+                      </select>
+                    </div>
+
+                    <div class="textfield postal">
+                      <label for="postal">Postal Code</label>
+                      <div class="input postal-input">
+                        <input type="text" id="postal" name="postal" placeholder="10001">
+                      </div>
+                    </div>
+
+                    <div class="textfield phone">
+                      <label for="phone">Phone Number</label>
+                      <div class="input phone-input">
+                        <input type="text" id="phone" name="phone" placeholder="(212) 692-93-92">
+                      </div>
+                    </div>
+
+                    <span class="legend payment">Payments Details</span>
+
+                    <div class="textfield credit-card">
+                      <label for="credit-card">Credit Card Number</label>
+                      <div class="input credit-card-input">
+                        <input type="text" id="credit-card" name="credit-card" placeholder="0000 - 0000 - 0000 - 0000">
+                      </div>
+                    </div>
+
+                    <div class="textfield s-code">
+                      <label for="s-code">Security Code</label>
+                      <div class="input s-code-input">
+                        <input type="password" id="s-code" name="s-code" placeholder="***">
+                      </div>
+                    </div>
+
+                    <div class="textfield ex-date">
+                      <label for="ex-date">Expiration date</label>
+                      <div class="input ex-date-input">
+                        <input type="text" id="ex-date" name="ex-date" placeholder="MM / YY">
+                      </div>
+                    </div>
+
+                    <div class="button-submit">
+                      <button type="submit" form="check_out_form" value="Submit">Complete Purchase</button>
+                    </div>
+
+                </form>
+              </div>
+            </div>
+            <div class="right-column">
+              <div class="order-cart-wrapper">
+                <div class="order-cart">
+
+                  <div class="basket-title">Your Order</div>
+                  <div class="products">
+                    <div class="product-wrapper">
+                      <div class="product-name">Apple Watch Sport</div>
+                      <div class="product-price">&#36; 580</div>
+                    </div>
+                    <div class="product-wrapper">
+                      <div class="product-name">Modern Buckle</div>
+                      <div class="product-price">&#36; 380</div>
+                    </div>
+                  </div>
+                  <div class="cost">
+                    <div class="total-purchases">
+                      <div class="total-purchases-text">Total purchases</div>
+                      <div class="total-purchases-price">&#36; 960.00</div>
+                    </div>
+                    <div class="tax">
+                      <div class="tax-text">Estimated tax</div>
+                      <div class="tax-price">&#36; 0</div>
+                    </div>
+                  </div>
+                  <div class="total-cost">
+                    <div class="total-text">Total</div>
+                    <div class="total-price">&#36; 960</div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </section>
         </div>
         <footer class="mdl-mega-footer">
