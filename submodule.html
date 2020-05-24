@@ -107,9 +107,10 @@
 
                     <div class="select country">
                       <label for="country">Country</label>
-                      <select>
-                        <option value="0">United States</option>
-                        <option value="1">Poland</option>
+                      <select name="country">
+                        <option value=""></option>
+                        <option value="1">United States</option>
+                        <option value="2">Poland</option>
                       </select>
                     </div>
 
@@ -130,28 +131,32 @@
                     <span class="legend payment">Payments Details</span>
 
                     <div class="textfield credit-card">
-                      <label for="credit-card">Credit Card Number</label>
+                      <label for="creditcard">Credit Card Number</label>
                       <div class="input credit-card-input">
-                        <input type="text" id="credit-card" name="credit-card" placeholder="0000 - 0000 - 0000 - 0000">
+                        <input type="text" id="credit-card" name="creditcard" placeholder="0000 - 0000 - 0000 - 0000">
                       </div>
                     </div>
 
                     <div class="textfield s-code">
-                      <label for="s-code">Security Code</label>
+                      <label for="scode">Security Code</label>
                       <div class="input s-code-input">
-                        <input type="password" id="s-code" name="s-code" placeholder="***">
+                        <input type="password" id="s-code" name="scode" placeholder="***">
                       </div>
                     </div>
 
                     <div class="textfield ex-date">
-                      <label for="ex-date">Expiration date</label>
+                      <label for="exdate">Expiration date</label>
                       <div class="input ex-date-input">
-                        <input type="text" id="ex-date" name="ex-date" placeholder="MM / YY">
+                        <input type="text" id="ex-date" name="exdate" placeholder="MM / YY">
                       </div>
                     </div>
 
                     <div class="button-submit">
-                      <button type="submit" form="check_out_form" value="Submit">Complete Purchase</button>
+                      <button type="submit" form="check_out_form" value="Submit" id="submit-form">Complete Purchase</button>
+                    </div>
+
+                    <div class="message-status">
+                      <span class="sent">Congrats. Purchase completed successfully!</span>
                     </div>
 
                 </form>
@@ -276,6 +281,12 @@
       });
     </script>
     <!-- END BACON by Jakub -->
+
+    <!-- jQuery, jQuery Validation, custom validation by Jakub -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="scripts/form-validate/form-validate.js"></script>
+    <!-- jQuery, jQuery Validation, custom validation by Jakub -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
